@@ -1,0 +1,6 @@
+flask
+pymongo
+ollama
+Pillow
+crewai
+selenium

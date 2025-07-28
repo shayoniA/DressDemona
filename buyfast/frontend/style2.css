@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+.myprohead, .mypostshead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px; color: #75bbbc;
+    width: 100%; text-align: center;
+    font-weight: 300; margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.mypostshead {
+    margin-top: 80px;
+}
+
+#mydetailsdiv {
+    text-align: center;
+    color: white; font-size: 17px;
+    font-family: 'Lora', serif;
+}
+
+.postImages {
+    border-radius: 10px;
+    height: 250px;
+}
