@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home | DressDemona</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blackbg"></div>
+  <div class="coverdiv"></div>
+  <h1 class="mainheading">Define Your Style</h1>
+  <h1 class="mainheadingcontd">Shop Across Platforms</h1>
+  <div class="overlay"></div>
+  <hr class="thisline" />
+
+  <div class="twopurposes">
+    <!-- Post Image -->
+    <div class="firstpurpose">
+      <h3 class="descofpost">Post your Amazing Outfits to Express Your Style, and we'll give Recommendations That Match Your Vibe!</h3>
+      <input type="file" id="imageUpload" multiple>
+      <div class="upload-wrapper">
+        <div class="spinner-dot" id="uploadSpinner"></div>
+        <button class="uploadbtn" id="uploadBtn" onclick="uploadImages()"><i class="fas fa-upload" style="color: white; font-size: 24px;"></i></button>
+      </div>
+    </div>
+    <div class="seconfpurpose">
+      <button class="showrec" onclick="gotorec()">Outfits Chosen For You</button>
+      <button class="tofeedbtn" onclick="gotofeed()">Go to Feed</button>
+    </div>
+  </div>
+
+  <button class="profilebtn" onclick="goProfile()"><i class="fas fa-user" style="color: #75bbbc; font-size: 24px;"></i></button>
+  <div class="footer">
+    <button class="outbtn" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

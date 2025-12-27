@@ -1,0 +1,13 @@
+flask
+flask-cors
+pymongo
+Pillow
+selenium
+google-genai
+python-dotenv
+sentence-transformers
+scikit-learn
+requests
+beautifulsoup4
+webdriver-manager
+titlecase

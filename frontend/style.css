@@ -1,0 +1,304 @@
+body {
+    background-color: rgb(37, 37, 37);
+    padding-top: 593px;
+    overflow-x: hidden;
+}
+
+.blackbg {
+    background-color: rgb(66, 66, 66);
+    width: 100%; height: 505px;
+    z-index: -3;
+    position: absolute; top: 0; left: 0;
+}
+
+.coverdiv {
+    background-image: url("./assets/images/cozy-portrait-young-woman-knitted-blue-sweater-bright-pink-makeup-holds-shopping-bags-shows-her-finger-left.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 700px; width: 85%;
+    position: absolute; top: 0; right: 0;
+    z-index: 1;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%; height: 506px;
+    z-index: 3;
+    position: absolute; top: 0; right: 0;
+}
+
+.mainheading {
+    font-size: 60px; font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: white; z-index: 5;
+    position: absolute; top: 125px; left: 44px;
+}
+
+.mainheadingcontd {
+    font-size: 60px; font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    color: white; z-index: 5;
+    position: absolute; top: 220px; left: 44px;
+}
+
+#searchQuery {
+    width: 440px; height: 45px;
+    border-radius: 50px; border: none;
+    padding-left: 10px;
+    color: black; font-size: 15px;
+    font-family: 'Lora', serif;
+    position: absolute; top: 480px; left: 90px;
+    z-index: 10;
+}
+
+.searchbtn {
+    height: 54px; width: 62px;
+    border-radius: 50px; border: none;
+    background-color: #539596;
+    position: absolute; top: 477px; left: 555px;
+    z-index: 15; cursor: pointer;
+    outline: 4.5px solid rgb(37, 37, 37);
+}
+
+.descofpost {
+    font-family: 'Lora', serif;
+    font-size: 18px; color: white;
+    font-weight: 300; width: 600px;
+    text-align: center;
+}
+
+#imageUpload {
+    margin-top: 0; z-index: 100;
+    position: relative; left: 210px;
+    top: 26px; bottom: 19px;
+}
+
+.uploadbtn::after {
+  content: "";
+  position: absolute;
+  top: -5.5px;
+  left: -5.5px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.uploadbtn:hover::after {
+  box-shadow: 0 0 20px 3px #d6bb33c6;
+}
+
+.thisline {
+    border: 0.75px solid grey; margin-top: 40px;
+    width: 17.5%; margin-bottom: 95px;
+    transform: rotate(90deg);
+    transform-origin: center;
+    position: absolute; top: 650px; left: 608px;
+    z-index: 1000;
+}
+
+.rechead {
+    font-size: 30px; font-family: 'Lora', serif;
+    color: rgb(204, 204, 204);
+    padding-left: 25px;
+    font-weight: 300; margin-top: 65px;
+}
+
+.cardimages {
+    border-radius: 5px;
+    height: 245px;
+}
+
+.cardnames {
+    color: #aaeef0; height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.cardprices, .carddeliveries {
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+.sitename {
+    color: #75bbbc;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-weight: 250;
+    width: 100%; background-color: rgb(44, 44, 44);
+    padding-top: 9px; padding-bottom: 9px;
+}
+
+.footer {
+    width: 100%; background-color: rgb(79, 79, 79);
+    padding-top: 7px; padding-bottom: 5px;
+    margin-top: 150px;
+}
+
+.onecard {
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px; border: none;
+    outline: none; margin: 10px;
+}
+
+.firstcard {
+    margin-left: 35.5px;
+}
+
+.outbtn {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: rgb(169, 169, 169);
+    text-align: center;
+    background-color: transparent;
+    border: none; outline: none;
+    width: 100%;
+}
+
+.profilebtn {
+    background-color: black;
+    width: 60px; height: 60px;
+    border-radius: 50%; border: none;
+    position: absolute; top: 10px; right: 10px;
+    z-index: 100; cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.profilebtn::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 90;
+}
+
+.profilebtn:hover::after {
+  border: 30px solid rgba(0, 0, 0, 0.359);
+}
+
+.site-logo {
+  display: block; border-radius: 50%;
+  width: 65px; height: 55px;
+  margin: auto; opacity: 85%;
+  margin-top: 25px; margin-bottom: 15px;
+}
+
+.showrec {
+    background-color: #4a8d8e; font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: none; color: white;
+    border-radius: 40px;
+    width: 280px; height: 53px;
+    padding: 10px 22px;
+    cursor: pointer;
+    z-index: 1000; position: relative;
+    margin-top: 20px; margin-right: 40px;
+}
+
+.showrec::after, .tofeedbtn::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5.5px;
+  width: 291px;
+  height: 64px;
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.showrec:hover::after, .tofeedbtn:hover::after {
+  box-shadow: 0 0 15px 0px #dbbf34c6;
+}
+
+.twopurposes {
+    display: flex; flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.tofeedbtn {
+    background-color: #4a8d8e; font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: none; color: white;
+    border-radius: 40px;
+    width: 280px; height: 53px;
+    padding: 10px 22px;
+    cursor: pointer;
+    z-index: 1000; position: relative;
+}
+
+.seconfpurpose {
+    display: flex; flex-direction: column;
+    gap: 15px; justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.upload-wrapper {
+  position: relative;
+}
+
+.uploadbtn {
+    width: 75px; height: 75px;
+    border-radius: 50%; border: none;
+    background-color: #539596;
+    position: relative; bottom: 20px; left: 325px;
+    cursor: pointer; z-index: 101;
+    transition: transform 0.2s ease;
+}
+
+.spinner-dot {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  left: 325px;
+  display: none;
+  pointer-events: none;
+}
+
+.spinner-dot::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spinning {
+  display: block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
