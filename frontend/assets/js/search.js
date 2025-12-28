@@ -1,4 +1,7 @@
 const userId = localStorage.getItem("user_id");
+
+const API_BASE = window.location.origin;
+
 let currentQuery = localStorage.getItem("last_query") || "";
 
 document.getElementById("searchQuery").value = currentQuery;

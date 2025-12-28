@@ -2,13 +2,15 @@ const userId = localStorage.getItem("user_id");
 let currentIndex = 0;
 let images = [];
 
+const API_BASE = "";
+
 async function fetchFeed() {
     try {
-        const userRes = await fetch(`http://127.0.0.1:5000/user/${userId}`);
+        const userRes = await fetch(`/user/${userId}`);
         const userData = await userRes.json();
         userLikes = userData.likes || [];
 
-        const response = await fetch(`http://127.0.0.1:5000/feed/${userId}`);
+        const response = await fetch(`/feed/${userId}`);
         const data = await response.json();
         console.log("This is the feed data:  ", data.feed);
         images = data.feed;
@@ -38,7 +40,7 @@ function convertForMatch(path) {
 
 async function updateUpvoteButtonColor(imagePath) {
     const upvoteBtn = document.getElementById("upvote-btn");
-    const user_me = await fetch(`http://127.0.0.1:5000/user/${userId}`);
+    const user_me = await fetch(`/user/${userId}`);
     const data_me = await user_me.json();
     console.log("Real string of like: ", data_me.likes[0]);
     if(data_me.likes.includes(convertForMatch(imagePath)))
@@ -50,8 +52,10 @@ async function updateUpvoteButtonColor(imagePath) {
 async function displayImage(index, otherUserId) {
     const imgElement = document.getElementById("main-image");
     const username = document.getElementById("user_name");
-    imgElement.src = `../../../uploads/${getPathAfterUploads(images[index].image)}`;
-    const res_ponse = await fetch(`http://127.0.0.1:5000/user/${otherUserId}`);
+    imgElement.src = `/uploads/${getPathAfterUploads(images[index].image)}`;
+    // imgElement.src = `/uploads/${images[index].image}`;
+    console.log("aaaaaaaaaaaaaaaaaaaa ", imgElement.src);
+    const res_ponse = await fetch(`/user/${otherUserId}`);
     const da_ta = await res_ponse.json();
     username.textContent = da_ta.email+" ⫷";
     const currentImagePath = images[index].image.replace(/\\/g, "/");
@@ -88,7 +92,7 @@ document.getElementById("upvote-btn").addEventListener("click", async () => {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:5000/upvote/${postUserId}/${postIndex}?upvoter_id=${upvoterId}`, {
+        const response = await fetch(`/upvote/${postUserId}/${postIndex}?upvoter_id=${upvoterId}`, {
             method: "POST"
         });
         const data = await response.json();

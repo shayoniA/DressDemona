@@ -16,7 +16,7 @@ def update_user_clusters():
     embeddings = model.encode(styles)
 
     # Decide number of clusters
-    num_clusters = 2
+    num_clusters = min(len(users),2)
     kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init=10)
     labels = kmeans.fit_predict(embeddings)
 

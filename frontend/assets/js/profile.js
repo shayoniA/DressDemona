@@ -1,22 +1,14 @@
 const userId = localStorage.getItem("user_id");
 
+const API_BASE = "";
+
 function convertToLocalUrl(originalPath) {
-  const keyword = "buyfast";
-  const baseUrl = "http://127.0.0.1:5500";
-
-  const startIndex = originalPath.indexOf(keyword);
-  if (startIndex === -1) {
-    console.error("The keyword 'buyfast' was not found in the path.");
-    return originalPath;
-  }
-
-  const newPath = originalPath.substring(startIndex + keyword.length);
-  const finalUrl = baseUrl + newPath.replace(/\\/g, "/"); // normalize slashes
-  return finalUrl;
+  if (!originalPath) return "";
+  return `/uploads/${originalPath.replace(/\\/g, "/")}`;
 }
 
 async function loadProfile() {
-  const res = await fetch(`http://127.0.0.1:5000/user/${userId}`);
+  const res = await fetch(`/user/${userId}`);
   const data = await res.json();
   const details = document.getElementById("mydetailsdiv");
   details.innerHTML = `EMAIL - ${data.email}`;

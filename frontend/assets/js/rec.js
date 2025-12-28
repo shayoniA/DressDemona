@@ -1,5 +1,7 @@
 const loader = document.getElementById("loader");
 
+const API_BASE = "";
+
 function showLoader() {
   loader.style.display = "flex";
 }
@@ -125,7 +127,7 @@ async function loadRecommendations() {
   showLoader();
   try {
     console.log("Trying to get recommendations...");
-    const res = await fetch(`http://127.0.0.1:5000/user/recommendations/${userId}`, {
+    const res = await fetch(`/user/recommendations/${userId}`, {
       method: "POST",
     });
     if (!res.ok) {

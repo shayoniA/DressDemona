@@ -7,7 +7,7 @@ from utils.clustering import update_user_clusters
 from bson import ObjectId
 
 image = Blueprint('image', __name__)
-UPLOAD_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../uploads"))
+UPLOAD_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../backend/uploads"))
 
 @image.route('/upload/<user_id>', methods=['POST'])
 def upload(user_id):
@@ -34,11 +34,13 @@ def upload(user_id):
             print("Image analysis failed:", e)
             description = "Could not analyze image."
         print("Updating ting ting...")
+        relative_path = f"{user_id}/{file.filename}"
+        print("The rel path is hereeeeeeeeeeeeeeeeeeeeeee: ", relative_path)
         db.users.update_one(
             {"_id": ObjectId(user_id)},
             {"$push": {
                     "posts": description,
-                    "post_images": filepath,
+                    "post_images": relative_path,
                     "post_upvotes": 0
             }}
         )

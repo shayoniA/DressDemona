@@ -1,4 +1,7 @@
 // SIGNUP
+
+const API_BASE = "";
+
 document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const sites = Array.from(document.querySelectorAll(".site:checked")).map(i => i.value);
@@ -7,7 +10,7 @@ document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
     password: password.value,
     linked_sites: sites
   };
-  const res = await fetch("http://127.0.0.1:5000/auth/signup", {
+  const res = await fetch(`/auth/signup`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body)
@@ -24,7 +27,7 @@ document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
 // LOGIN
 document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const res = await fetch("http://127.0.0.1:5000/auth/login", {
+  const res = await fetch(`/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

@@ -1,5 +1,7 @@
 const userId = localStorage.getItem("user_id");
 
+const API_BASE = "";
+
 // Upload image and get dress descriptions
 async function uploadImages() {
   const files = document.getElementById("imageUpload").files;
@@ -22,8 +24,8 @@ async function uploadImages() {
   }
 
   try {
-    console.log("Uploading to: ", `http://127.0.0.1:5000/image/upload/${userId}`);
-    const res = await fetch(`http://127.0.0.1:5000/image/upload/${userId}`, {
+    console.log("Uploading to: ", `/image/upload/${userId}`);
+    const res = await fetch(`/image/upload/${userId}`, {
       method: "POST",
       body: formData
     });
