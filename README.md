@@ -35,20 +35,15 @@ python app.py
 
 ## Key Features
 
-1. **LLM-powered Outfit Understanding**
-   Upload outfit images and automatically extract concise clothing descriptions using a multimodal LLM.
+1. **LLM-powered Outfit Understanding** – Upload outfit images and automatically extract concise clothing descriptions using a multimodal LLM.
 
-2. **Personal Style Profiling**
-   Build a dynamic fashion profile based on uploaded outfits.
+2. **Personal Style Profiling** – Build a dynamic fashion profile based on uploaded outfits.
 
-3. **Style-Based Social Feed**
-   Users are clustered based on fashion preferences and shown outfits from similar users.
+3. **Style-Based Social Feed** – Users are clustered based on fashion preferences and shown outfits from similar users.
 
-4. **Cross-Platform Shopping Recommendations**
-  Fetches fashion items matching the user’s style from multiple shopping sites (here, Amazon and Zara).
+4. **Cross-Platform Shopping Recommendations** – Fetches fashion items matching the user’s style from multiple shopping sites (here, Amazon and Zara).
 
-5. **End-to-End Full Stack System**
-  Authentication, image uploads, feed ranking, clustering, and recommendations.
+5. **End-to-End Full Stack System** – Authentication, image uploads, feed ranking, clustering, and recommendations.
 
 ---
 
