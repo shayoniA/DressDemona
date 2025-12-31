@@ -1,7 +1,7 @@
 # DressDemona
 An AI-powered fashion-discovery platform that helps users define their personal style through outfit uploads and receive curated clothing recommendations across multiple e-commerce platforms. By combining computer vision and LLMs, DressDemona creates a personalized fashion experience. Users can upload outfit images and get recommendations from websites like Zara and Amazon, all tailored to their fashion preferences.
 
-**Demo Video:** [https://drive.google.com/file/d/1cjAATwds1UuHmvSKC2Dn4ooxX58_pds4/view]
+**Demo Video:** [https://drive.google.com/file/d/1PP9bRJ21m0zf_isI5kRoBzH0NZQ6N9OQ/view]
 
 ---
 
