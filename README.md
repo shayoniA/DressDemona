@@ -5,7 +5,7 @@ An AI-powered fashion-discovery platform that helps users define their personal 
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Backend Setup
 ```
